@@ -21,6 +21,7 @@ ThisBuild / homepage      := Some(url("https://github.com/rolang/dumbo"))
 ThisBuild / scalafmt          := true
 ThisBuild / scalafmtSbtCheck  := true
 ThisBuild / semanticdbEnabled := true
+ThisBuild / resolvers += Resolver.sonatypeCentralSnapshots
 ThisBuild / semanticdbVersion := scalafixSemanticdb.revision // use Scalafix compatible version
 
 // githubWorkflow
@@ -239,9 +240,9 @@ lazy val root = tlCrossRootProject
   .aggregate(core, tests, testsFlyway)
   .settings(commonSettings)
 
-lazy val skunkVersion = "1.0.0-M11"
+lazy val skunkVersion = "1.0-b51f59c-SNAPSHOT"
 
-lazy val munitVersion = "1.0.0"
+lazy val munitVersion = "1.2.0"
 
 lazy val munitCEVersion = "2.1.0"
 
